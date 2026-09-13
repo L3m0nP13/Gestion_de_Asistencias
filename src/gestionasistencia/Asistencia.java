@@ -3,24 +3,24 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Asistencia {
-    private int id;
+   
     private Usuario usuario;
     private LocalDate fecha;
-    private LocalTime horaEntrada ;
+    private LocalTime horaEntrada;
     private LocalTime horaSalida;
     
-    public Asistencia(int id, Usuario usuario, LocalDate fecha){
-        this.id = id;
+    public Asistencia(Usuario usuario){
         this.usuario = usuario;
-        this.fecha = fecha;
     }
   
     //METODOS INDEPENDIENTES
     public void registrarEntrada() {
-        horaEntrada = LocalTime.now();
+        //hace el cambio dentro de un objeto asistencia creado
+        horaEntrada = LocalTime.now(); 
     }
 
     public void registrarSalida() {
+        //hace el cambio dentro de un objeto asistencia creado
         horaSalida = LocalTime.now();
     }
 
