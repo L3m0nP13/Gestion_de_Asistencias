@@ -1,22 +1,29 @@
 package gestionasistencia;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-//SE USARÁ EN AVANCE 2
 public class Conexion {
-    public static void main(String[] args) {
-        String url = ""; //SQL URL
-        String usuario = "";
-        String contraseña = "";
+
+    private final String usuario = "root";
+    private final String clave = "";
+    private final String bbdd = "SistemaAsistencia";
+    private final String url = "jdbc:mariadb://127.0.0.1:3306/" + bbdd;
+
+    public Connection conectar() {
+
+        Connection conexion = null;
 
         try {
-            Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
-            System.out.println(":D conexión exitosa.");
-            conexion.close();
+            conexion = DriverManager.getConnection(url, usuario, clave);
+            System.out.println("Conexion exitosa");
+
         } catch (SQLException e) {
-            System.out.println("Error en la conexión:");
+            System.out.println("Error de conexion");
             e.printStackTrace();
         }
+
+        return conexion;
     }
 }
