@@ -1,40 +1,38 @@
 
 package gestionasistencia;
 
-import java.util.ArrayList;
+import java.time.LocalDate;
 import java.util.List;
 
 public class ControladorAsistencia {
-    private List<Usuario> usuarios;
-    private List<Asistencia> asistencias;
+    //BORRAR DSP PARA CUANDO USEMOS BASE DE DATOS
+    protected List<Asistencia> lista_asistencia;
     
-  public class SistemaAsistencia {
-
-    private List<Usuario> usuarios;
-    private List<Asistencia> asistencias;
-
-    public SistemaAsistencia() {
-        usuarios = new ArrayList<>();
-        asistencias = new ArrayList<>();
-    }
-
-    public void crearUsuario(Usuario usuario) {
-        usuarios.add(usuario);
-    }
-
-    public void eliminarUsuario(Usuario usuario) {
-        usuarios.remove(usuario);
-    }
-
-    public void modificarUsuario(Usuario usuario) {
-        // Implementación de modificación
-    }
-
-    public void registrarAsistencia(Asistencia asistencia) {
-        asistencias.add(asistencia);
+    //PARA EL SINGLETON
+    public static ControladorAsistencia instancia;
+    
+    private ControladorAsistencia(){
     }
     
-     
+        public static ControladorAsistencia getInstancia(){
+        if(instancia==null)
+        {
+            instancia = new ControladorAsistencia();
+        }
+        return instancia;
+    }
+
     
+   
+    public void registrarEntrada(Usuario u){
+        Asistencia asistencia = new Asistencia(u);
+        asistencia.registrarEntrada();
+        lista_asistencia.add(asistencia); //CAMBIAR ESO A INSERT PARA LA BBDD
+    }
+    
+    public void registrarSalida(Usuario u){
+        Asistencia asistencia = new Asistencia(u);
+        asistencia.registrarSalida();
+        lista_asistencia.add(asistencia); //CAMBIAR ESO A INSERT PARA LA BBDD
     }
 }
