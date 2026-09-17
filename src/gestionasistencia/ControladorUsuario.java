@@ -8,6 +8,55 @@ import java.util.ArrayList;
 
 public class ControladorUsuario {
 
+    public ResultadoAutenticacion autenticarUsuario(String correo, String contrasena) {
+
+        String sql = "SELECT id_usuario, nombre, correo, contrasena, rol "
+                + "FROM Usuario WHERE correo = ? AND contrasena = ?";
+
+        Conexion conexionBD = new Conexion();
+
+        try (Connection conexion = conexionBD.conectar()) {
+
+            if (conexion == null) {
+                return ResultadoAutenticacion.error(
+                        "No fue posible conectar con la base de datos."
+                );
+            }
+
+            try (PreparedStatement sentencia = conexion.prepareStatement(sql)) {
+
+                sentencia.setString(1, correo);
+                sentencia.setString(2, contrasena);
+
+                try (ResultSet resultado = sentencia.executeQuery()) {
+
+                    if (resultado.next()) {
+                        Usuario usuario = new Usuario(
+                                resultado.getInt("id_usuario"),
+                                resultado.getString("nombre"),
+                                resultado.getString("correo"),
+                                resultado.getString("contrasena"),
+                                resultado.getString("rol")
+                        );
+
+                        return ResultadoAutenticacion.exito(usuario);
+                    }
+                }
+            }
+
+            return ResultadoAutenticacion.error("Correo o contraseña incorrectos.");
+
+        } catch (SQLException e) {
+
+            System.out.println("Error al autenticar usuario");
+            e.printStackTrace();
+
+            return ResultadoAutenticacion.error(
+                    "No se pudo validar el usuario. Verifique la conexión."
+            );
+        }
+    }
+
     
     
     public boolean existeCorreo(String correo) {
