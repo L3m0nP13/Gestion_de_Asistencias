@@ -332,7 +332,15 @@ public class GestionUsuario extends javax.swing.JFrame {
             new String [] {
                 "ID", "Nombre", "Correo", "Rol"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tbl_usuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_usuarioMouseClicked(evt);
