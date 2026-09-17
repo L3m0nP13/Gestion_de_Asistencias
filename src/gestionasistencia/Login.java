@@ -166,9 +166,15 @@ public class Login extends javax.swing.JFrame {
             return;
         }
 
-        SesionUsuario.iniciarSesion(resultado.getUsuario());
+        Usuario usuario = resultado.getUsuario();
+        SesionUsuario.iniciarSesion(usuario);
         dispose();
-        new ControlAsistencia().setVisible(true);
+
+        if ("Administrador".equalsIgnoreCase(usuario.getRol().trim())) {
+            new GestionUsuario().setVisible(true);
+        } else {
+            new ControlAsistencia(usuario).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
