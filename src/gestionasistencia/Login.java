@@ -16,7 +16,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    //GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -138,7 +138,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }//GEN-END:initComponents
 
     private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
         iniciarSesion();
@@ -194,7 +194,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    //GEN-BEGIN:variables
     private javax.swing.JButton btn_ingresar;
     private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
@@ -205,5 +205,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField txt_contrasena;
     private javax.swing.JTextField txt_correo;
-    // End of variables declaration//GEN-END:variables
+    //GEN-END:variables
 }

@@ -86,7 +86,6 @@ public class ControladorUsuario {
     }
 }
     
-    // CREAR USUARIO
     public boolean crearUsuario(Usuario usuario) {
 
         if (existeCorreo(usuario.getCorreo())) {
@@ -123,7 +122,6 @@ public class ControladorUsuario {
     }
 
 
-    // BUSCAR USUARIO POR ID
     public Usuario buscarUsuario(int idUsuario) {
 
         String sql = "SELECT id_usuario, nombre, correo, contrasena, rol "
@@ -163,7 +161,6 @@ public class ControladorUsuario {
     }
 
 
-    // MODIFICAR USUARIO
     public boolean modificarUsuario(Usuario usuario) {
 
         String sql = "UPDATE Usuario "
@@ -200,7 +197,6 @@ public class ControladorUsuario {
     }
 
 
-    // ELIMINAR USUARIO
     public boolean eliminarUsuario(int idUsuario) {
 
         String sql = "DELETE FROM Usuario "
@@ -229,7 +225,6 @@ public class ControladorUsuario {
     }
 
 
-    // LISTAR USUARIOS
     public ArrayList<Usuario> listarUsuarios() {
 
         ArrayList<Usuario> listaUsuarios = new ArrayList<>();

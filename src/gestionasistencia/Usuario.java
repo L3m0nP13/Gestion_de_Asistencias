@@ -8,7 +8,6 @@ public class Usuario {
     private String contrasena;
     private String rol;
 
-    // CONSTRUCTOR
     public Usuario(int id, String nombre, String correo, String contrasena, String rol) {
         this.id = id;
         this.nombre = nombre;
@@ -17,7 +16,6 @@ public class Usuario {
         this.rol = rol;
     }
 
-    // GETTERS
     public int getId() {
         return id;
     }
@@ -38,7 +36,6 @@ public class Usuario {
         return rol;
     }
 
-    // SETTERS
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }

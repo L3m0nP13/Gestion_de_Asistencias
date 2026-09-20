@@ -30,7 +30,7 @@ public class ControlAsistencia extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    //GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -180,7 +180,7 @@ public class ControlAsistencia extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }//GEN-END:initComponents
 
     private void btn_entradaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_entradaActionPerformed
         registrar(controlador.registrarEntrada(usuarioActual), "Entrada");
@@ -256,7 +256,7 @@ public class ControlAsistencia extends javax.swing.JFrame {
         super.dispose();
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    //GEN-BEGIN:variables
     private javax.swing.JButton btn_cerrar_sesion;
     private javax.swing.JButton btn_entrada;
     private javax.swing.JButton btn_salida;
@@ -271,5 +271,5 @@ public class ControlAsistencia extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_hora;
     private javax.swing.JLabel lbl_ultimo_registro;
     private javax.swing.JLabel lbl_usuario;
-    // End of variables declaration//GEN-END:variables
+    //GEN-END:variables
 }

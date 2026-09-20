@@ -45,9 +45,7 @@ public class Asistencia {
         return tipo;
     }
 
-    //METODOS INDEPENDIENTES
     public void registrarEntrada() {
-        //hace el cambio dentro de un objeto asistencia creado
         fecha = LocalDate.now();
         horaEntrada = LocalTime.now();
         hora = horaEntrada;
@@ -55,7 +53,6 @@ public class Asistencia {
     }
 
     public void registrarSalida() {
-        //hace el cambio dentro de un objeto asistencia creado
         fecha = LocalDate.now();
         horaSalida = LocalTime.now();
         hora = horaSalida;
