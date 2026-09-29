@@ -1,5 +1,7 @@
-package gestionasistencia;
+package gestionasistencia.Views;
 
+import gestionasistencia.Controladores.ControladorUsuario;
+import gestionasistencia.Modelos.Usuario;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 

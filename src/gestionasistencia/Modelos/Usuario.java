@@ -1,4 +1,4 @@
-package gestionasistencia;
+package gestionasistencia.Modelos;
 
 public class Usuario {
 

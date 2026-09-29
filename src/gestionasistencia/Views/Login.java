@@ -4,8 +4,6 @@ import gestionasistencia.Controladores.ControladorUsuario;
 import gestionasistencia.Modelos.ResultadoAutenticacion;
 import gestionasistencia.Modelos.SesionUsuario;
 import gestionasistencia.Modelos.Usuario;
-import gestionasistencia.Views.GestionUsuario;
-import gestionasistencia.Views.ControlAsistencia;
 import javax.swing.JOptionPane;
 
 public class Login extends javax.swing.JFrame {
@@ -22,7 +20,7 @@ public class Login extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    //GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -40,7 +38,7 @@ public class Login extends javax.swing.JFrame {
         setTitle("Sistema de Asistencia");
         setResizable(false);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18));
         jLabel1.setText("Inicio De Sesión");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -61,7 +59,6 @@ public class Login extends javax.swing.JFrame {
         );
 
         jLabel2.setText("Correo");
-
         jLabel3.setText("Contraseña");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -145,7 +142,7 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }//GEN-END:initComponents
 
     private void btn_ingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ingresarActionPerformed
         iniciarSesion();
@@ -201,7 +198,7 @@ public class Login extends javax.swing.JFrame {
         java.awt.EventQueue.invokeLater(() -> new Login().setVisible(true));
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    //GEN-BEGIN:variables
     private javax.swing.JButton btn_ingresar;
     private javax.swing.JButton btn_salir;
     private javax.swing.JLabel jLabel1;
@@ -212,5 +209,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPasswordField txt_contrasena;
     private javax.swing.JTextField txt_correo;
-    // End of variables declaration//GEN-END:variables
+    //GEN-END:variables
 }

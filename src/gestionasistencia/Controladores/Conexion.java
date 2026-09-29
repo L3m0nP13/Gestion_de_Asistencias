@@ -1,4 +1,4 @@
-package gestionasistencia;
+package gestionasistencia.Controladores;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

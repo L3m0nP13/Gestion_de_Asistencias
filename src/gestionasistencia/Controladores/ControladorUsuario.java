@@ -1,5 +1,7 @@
-package gestionasistencia;
+package gestionasistencia.Controladores;
 
+import gestionasistencia.Modelos.ResultadoAutenticacion;
+import gestionasistencia.Modelos.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

@@ -1,4 +1,4 @@
-package gestionasistencia.Modelos;
+package gestionasistencia;
 
 import gestionasistencia.Views.Login;
 
