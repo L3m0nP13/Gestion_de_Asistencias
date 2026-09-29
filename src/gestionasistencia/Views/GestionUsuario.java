@@ -2,6 +2,9 @@ package gestionasistencia.Views;
 
 import gestionasistencia.Controladores.ControladorUsuario;
 import gestionasistencia.Modelos.Usuario;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -14,9 +17,23 @@ public class GestionUsuario extends javax.swing.JFrame {
    
     public GestionUsuario() {
         initComponents();
+        configurarMenuReportes();
         
         controlador = new ControladorUsuario();
         cargarTablaUsuarios();
+    }
+
+    private void configurarMenuReportes() {
+        JMenuBar barraMenu = new JMenuBar();
+        JMenu menuModulos = new JMenu("Módulos");
+        JMenuItem opcionReportes = new JMenuItem("Reportes de asistencia");
+
+        opcionReportes.addActionListener(evento
+                -> new ReporteAsistencia().setVisible(true));
+
+        menuModulos.add(opcionReportes);
+        barraMenu.add(menuModulos);
+        setJMenuBar(barraMenu);
     }
 
     private void cargarTablaUsuarios() {
